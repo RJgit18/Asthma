@@ -28,4 +28,4 @@ jobs:
       run: echo "PYTHONPATH=$PYTHONPATH:$(pwd)/src" >> $GITHUB_ENV
 
     - name: Run tests
-      run: run: pytest
+      run: pytest

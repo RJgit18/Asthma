@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import pickle
-from src.Rule import AsthmaPredictor  # Prediction interface
+from Rule import AsthmaPredictor  # Prediction interface
 import pandas as pd
 
 # Load both models

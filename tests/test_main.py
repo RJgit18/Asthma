@@ -1,6 +1,7 @@
 import pickle
 import pytest
 import pandas as pd
+from Rule import AsthmaPredictor
 
 # Load Models
 

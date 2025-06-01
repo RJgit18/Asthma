@@ -56,7 +56,7 @@ if user_type == "General User":
 
 # -------------------- CLINICAL USER PAGE --------------------
 elif user_type == "Clinical User":
-    st.header("Clinical Assessment for Healthcare Professionals")
+    st.header("Clinical Assessment")
     st.markdown("Provide detailed clinical parameters:")
 
     age = st.slider("Age", 0, 100, 25)

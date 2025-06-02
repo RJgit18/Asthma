@@ -2,89 +2,97 @@
 
 ## Introduction
 
-So, In this project, I have developed a scalable time-series forecasting pipeline using Prophet, designed for quantitative financial forecasting to predict the future stock price of a given company or entity, specifically focusing on its performance month/year ahead. The pipeline integrates critical features such as seasonality, holiday effects, and trend analysis to predict future stock price movements and to provide accurate and actionable forecasts.
+I have developed an asthma risk predictor system for both general users and clinical patients/professionals. It assesses the likelihood of asthma based on basic symptoms and advanced clinical metrics given by user and provides results along with Probability of the Risk. 
 
 ### Key Features
 
-1. **Prophet-based time series forecasting**
-2. **Incorporates MACD, Signal Line, RSI (7) as regressors**
+1. **Dual User Interface**
+2. **Model Driven Risk Prediction**
+   - **XGBoost** Model for general **Symptom based assessment**.
+   - **CatBoost** Model for clinical evaluation using metrics like **FEV1/FVC Ratio**.
 
 ### Objectives
 
-The primary goal of this project is to create a time-series forecasting system that can:
+The primary goal of this project is to develope a asthma risk predictor system that can :
 
-1. Analyze Real-time historical data to predict future trends.
-2. Provide Investor a realistic Forecast.
-3. Calculates Stability and Volatility scores Based on these metrics generates insights that will provide investor a assistance.
+1. Predict near to perfect Asthma Risk along with Probability. 
+2. Incorporate general health indicators, symptoms and clinical metrics based on that provide accurate results.
+3. Adapt to both general and clinical users or healthcare professionals which provides Advice to general users along with results while clear information to clinical professionals.
+
+### Technologies Used
+
+- **Machine Learning** : XGBoost, CatBoost
+- **Frontend** : Streamlit
+- **Testing** : Pytest
+- **Language** : Python 3.10+
+
 
 ### Prerequisites
 To run this project, you need to install the following libraries:
 ### Required Libraries
 
-- **Python 3.12+**
+- **Python 3.10+**
 - **Pandas**: This library performs data manipulation and analysis also provides powerful data structures like dataframes.
-- **Prophet**: A forecasting tool for time-series data, designed to handle trends, seasonality and holidat effects.
-- **YFinance**: Yfinance library allows you to easily download historical market data from Yahoo Finance, including stock prices, financials, and more.
-- **Fast-Api**: It is Python web framework for building APIs.
+- **XGBoost**: An optimized gradient boosting library designed for high performance and speed in structured/tabular data tasks.
+- **CatBoost**: A gradient boosting algorithm developed by Yandex, built to handle categorical features automatically.
+- **Pytest**: Python testing framework used for writing simple to complex test cases for applications and libraries.
 - **Streamlit**: Streamlit is a framework that builds interactive, data-driven web applications directly in python.  
 
-Other Utility Libraries : **uvicorn**, **matplotlib**, **numpy**.
+Other Utility Libraries : **numpy**.
 
 ### Installation
 
    ```
    pip install pandas
-   pip install prophet
+   pip install scikit-learn
    pip install numpy
-   pip install yfinance
    pip install streamlit
-   pip install uvicorn
-   pip install fastapi
-   pip install matplotlib
+   pip install xgboost
+   pip install catboost
+   pip install pytest
    ```
 
 ### Procedure
 
-1.   Create new directory **'Financial Research Assistant'**.
+1.   Create new directory **'Asthma Predictor'**.
 2.   Inside that directory/folder create new environment.
    
    ```
-   python -m venv fra
+   python -m venv asthp
    ```
 
-  Now, activate this **'fra'** venv.
+  Now, activate this **'asthp'** venv.
   
 4.   Clone this Repository :
 
    ```
-   git clone https://github.com/Rajcr2/FRA.git
+   git clone https://github.com/Rajcr2/Asthma-Predictor.git
    ```
 5.   Now, Install all mentioned required libraries in your environment.
-6.   Start Backend server first now with command.
+6.   After, that Run **'main.py'** file from Terminal. To activate the dashboard on your browser.
    ```
-   uvicorn main:app --reload
-   ```
-7.   After, that Run **'app.py'** file from Terminal. To activate the dashboard on your browser.
-   ```
-   streamlit run app.py
+   streamlit run src/main.py
    ``` 
 7.   Now, move to your browser.
-8.   Enter name of a company which stock you want to buy after that it will provide you company stock symbol.
-9.   Copy that particular stock symbol & set the model parameters such as changepoint or forecast period and finally click on **'Analyze Stock'** button.
-10.  Then within few minutes prophet will train and analyze the model after that you will see forecast results with graphs along with insights.
+8.   First select user type whether you are General or Clinical if you have performed lab test already then choose Clinical user type otherwise stick to General user type.
+9.   Enter basic health details as an input from user and click on **'Predict Asthma Risk'** button if you are clinical user then click on **'Clinical Asthma Risk Prediction'**.
+10.  After that wait for results within seconds you will see whether you are **at risk of asthma or not** along with **'Probability'**.
 
 ### Output
 
-General User Assesment :
-https://github.com/user-attachments/assets/fe6caffe-f443-4686-aac9-21a6e5919c27
+#### General Assesment :
 
-Clinical User Assesment :
-https://github.com/user-attachments/assets/17edf797-c955-4d69-bda1-e6ddb44d94d0
+https://github.com/user-attachments/assets/8e57d47e-599e-406b-815f-bf19e53e042b
+
+
+#### Clinical Assesment :
+
+https://github.com/user-attachments/assets/75a9b34b-83da-4bff-8ed9-e360e27a2387
 
 
 ### Conclusion
 
-Based on error metrics, the model has provided valuable insights. For example, it has identified **TCS** as relatively stable and you can consider for long-term investment, even though Indian market currently facing downturn & vice-versa identified **Adani Green** as highly volatile and mostly suitable for short-term investing/trading. Additionally, the model has effectively captured trends, achieving approximately 65-80% accuracy in actual forecasts.
+This project demonstrates how machine learning models like XGBoost and CatBoost can be effectively used to assess the asthma risk in both general and clinical scenarios, supporting early diagnosis and public health awareness.
 
 
 

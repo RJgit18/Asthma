@@ -66,7 +66,7 @@ Other Utility Libraries : **numpy**.
 4.   Clone this Repository :
 
    ```
-   git clone https://github.com/Rajcr2/Asthma-Predictor.git
+   git clone https://github.com/RJgit18/Asthma.git
    ```
 5.   Now, Install all mentioned required libraries in your environment.
 6.   After, that Run **'main.py'** file from Terminal. To activate the dashboard on your browser.
